@@ -19,7 +19,7 @@ class WallController < ApplicationController
 	end
 
 	def edit_complete
-		p Post.find(params[:id])
+		p = Post.find(params[:id])
 		p.name = params[:writer_edit]
 		p.content = params[:content_edit]
 		if p.save
