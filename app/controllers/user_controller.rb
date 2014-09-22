@@ -12,7 +12,7 @@ class UserController < ApplicationController
 				redirect_to "/wall/posts"
 			else
 				flash[:alert] = u.errors.values.flatten.join(' ')
-				fedirect_to :back
+				redirect_to :back
 			end
 		else
 			flash[:alert] = "Password doesn't match."
